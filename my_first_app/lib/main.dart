@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'lab6.dart' as lab6;
 import 'lab7.dart' as lab7;
 import 'lab8.dart' as lab8;
+import 'lab9.dart' as lab9;
 
 void main() {
   runApp(
@@ -22,7 +23,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Lắng nghe trạng thái Sáng/Tối từ ThemeModel của Lab 8
     final isDark = context.watch<lab8.ThemeModel>().isDark;
 
     return MaterialApp(
@@ -85,6 +85,14 @@ class MenuChinh extends StatelessWidget {
                   MaterialPageRoute(builder: (_) => const lab8.TrangDanhSach()),
                 ),
                 child: const Text('Mo Lab 8: Todo List (Provider)'),
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const lab9.TrangLab9()),
+                ),
+                child: const Text('Mo Lab 9: Goi API & Xu Ly JSON'),
               ),
             ],
           ),
