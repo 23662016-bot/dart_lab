@@ -5,6 +5,7 @@ import 'lab6.dart' as lab6;
 import 'lab7.dart' as lab7;
 import 'lab8.dart' as lab8;
 import 'lab9.dart' as lab9;
+import 'lab10.dart' as lab10;
 
 void main() {
   runApp(
@@ -12,6 +13,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => lab8.TodoModel()),
         ChangeNotifierProvider(create: (_) => lab8.ThemeModel()),
+        ChangeNotifierProvider(create: (_) => lab10.ChiTieuModel()),
       ],
       child: const MyApp(),
     ),
@@ -93,6 +95,14 @@ class MenuChinh extends StatelessWidget {
                   MaterialPageRoute(builder: (_) => const lab9.TrangLab9()),
                 ),
                 child: const Text('Mo Lab 9: Goi API & Xu Ly JSON'),
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const lab10.TrangDanhSach()),
+                ),
+                child: const Text('Mo Lab 10: Quan Ly Chi Tieu Ca Nhan'),
               ),
             ],
           ),
