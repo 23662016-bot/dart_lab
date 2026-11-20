@@ -1,0 +1,6 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/dart-lang/devcontainer-features/dart:1": {}
+  }
+}
